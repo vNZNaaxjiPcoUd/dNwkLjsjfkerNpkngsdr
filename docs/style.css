@@ -55,3 +55,9 @@
             /*background-color: #f8f9fa;  表頭加上極淡的灰底作區隔 */
             font-weight: 600;
         }     
+
+        hr {
+            border: none;                 /* 清除瀏覽器預設的立體邊框 */
+            border-top: 1px solid #060606; /* 設定為 1px 淡淡的灰色實線 */
+            margin: 24px 0;               /* 上下留白，讓排版更有呼吸感 */
+        }        
