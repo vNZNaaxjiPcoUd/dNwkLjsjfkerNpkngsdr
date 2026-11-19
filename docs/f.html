@@ -6,11 +6,17 @@
     <title>文章</title>
     <link rel="icon" type="image/png" sizes="192x192" href="./favicon192.png">
     <link rel="apple-touch-icon" href="./favicon192.png">
-  <meta property="og:title" content="文章">
-  <meta property="og:description" content="有趣的資訊。">
-  <meta property="og:image" content="https://d.jwint.net/GoodLuck.jpeg">
-  <meta property="og:url" content="https://d.jwint.net/">
-  <meta property="og:type" content="website">
+
+    <!-- 預先連線以加速字型載入 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 引入 Google Fonts 的霞鶩文楷繁體版 (LXGW WenKai TC) 與英文字型 EB Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">  <meta property="og:title" content="文章">
+
+    <meta property="og:description" content="有趣的資訊。">
+    <meta property="og:image" content="https://d.jwint.net/GoodLuck.jpeg">
+    <meta property="og:url" content="https://d.jwint.net/">
+    <meta property="og:type" content="website">
 
     <!-- 引入 CryptoJS 用於前端計算 MD5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
@@ -27,12 +33,28 @@
             padding: 20px;
             background-color: #000; /* 黑底 */
             color: #fff; /* 白字 */
-            font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'Georgia',  'BiauKai', 'DFKai-SB', 'STKaiti', serif;
             line-height: 1.6;
             box-sizing: border-box;
             min-height: 100vh;
             word-wrap: break-word;
             font-size: x-large;
+            font-family: 
+                /* 1. 英文與數字優先使用襯線體 */
+                'EB Garamond', 'Georgia', 
+                /* 2. 雲端開源楷書（確保 Android / iOS 顯示一致且美觀） */
+                'LXGW WenKai TC', 
+                /* 3. 你原本指定的特殊行書/楷書（若有安裝則優先） */
+                /* 4. macOS / iOS 系統內建楷書 */
+                'BiauKaiTC', 'BiauKai', 'STKaiti', 'Kaiti TC', 
+                /* 5. Windows 系統內建標楷體 */
+                'DFKai-SB', 'KaiTi', 
+                /* 6. 最後保底 */
+                cursive, serif;
+                
+            /* 楷書筆畫較細，建議適度調整字級與行高提升閱讀體驗 */
+            font-size: x-large;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;            
         }
         
         #content {
@@ -63,6 +85,22 @@
             padding-left: 15px;
             color: #bbb;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 合併相鄰框線，避免出現雙重線條 */
+            margin: 16px 0;
+        }
+
+        th, td {
+            border: 1px solid #272727; /* 淡淡的灰色框線 */
+            padding: 10px 14px;        /* 增加文字與框線的呼吸空間 */
+            text-align: left;
+        }
+
+        th {
+            /*background-color: #f8f9fa;  表頭加上極淡的灰底作區隔 */
+            font-weight: 600;
+        }        
     </style>
 </head>
 <body>
