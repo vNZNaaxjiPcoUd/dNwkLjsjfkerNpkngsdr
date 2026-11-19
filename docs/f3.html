@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <!-- 引入 Marked.js 用於解析 Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
+    <link rel="stylesheet" href="style.css">      
     <style>
         /* 1. 宣告並載入 GuanGeKai-C-Regular.woff2 */
         @font-face {
@@ -30,45 +30,8 @@
      
         /* 基礎版面設定：黑底白字，支援手機滿版且可上下滾動 */
         body {
-            margin: 0;
-            padding: 20px;
-            background-color: #000; /* 黑底 */
-            color: #fff; /* 白字 */
             font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'Georgia', 'GuanGeKai-C', 'BiauKai', 'DFKai-SB', 'STKaiti', serif;
-            line-height: 1.6;
-            box-sizing: border-box;
-            min-height: 100vh;
-            word-wrap: break-word;
             font-size: x-large;
-        }
-        
-        #content {
-            max-width: 3000px;
-            margin: 0 auto;
-        }
-
-        /* 針對 Markdown 常見元素的暗色系樣式優化 */
-        a { color: #4DA8DA; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        pre, code {
-            background-color: #222;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        pre {
-            padding: 15px;
-            overflow-x: auto; /* 程式碼過長時允許橫向滾動 */
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        blockquote {
-            border-left: 4px solid #555;
-            margin-left: 0;
-            padding-left: 15px;
-            color: #bbb;
         }
     </style>
 </head>
@@ -83,7 +46,7 @@
     </div>    
     <div id="content"></div>
 
-    <script src="f.js"></script>
+    <script src="s.js"></script>
 </body>
 </html>
 
