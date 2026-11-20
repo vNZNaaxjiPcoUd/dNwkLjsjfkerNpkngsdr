@@ -6,17 +6,11 @@
     <title>文章</title>
     <link rel="icon" type="image/png" sizes="192x192" href="./favicon192.png">
     <link rel="apple-touch-icon" href="./favicon192.png">
-
-    <!-- 預先連線以加速字型載入 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- 引入 Google Fonts 的霞鶩文楷繁體版 (LXGW WenKai TC) 與英文字型 EB Garamond -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">  <meta property="og:title" content="文章">
-
-    <meta property="og:description" content="有趣的資訊。">
-    <meta property="og:image" content="https://d.jwint.net/GoodLuck.jpeg">
-    <meta property="og:url" content="https://d.jwint.net/">
-    <meta property="og:type" content="website">
+  <meta property="og:title" content="文章">
+  <meta property="og:description" content="有趣的資訊。">
+  <meta property="og:image" content="https://d.jwint.net/GoodLuck.jpeg">
+  <meta property="og:url" content="https://d.jwint.net/">
+  <meta property="og:type" content="website">
 
     <!-- 引入 CryptoJS 用於前端計算 MD5 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
@@ -24,32 +18,21 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="style.css">      
     <style>
-
+        /* 1. 宣告並載入 GuanGeKai-C-Regular.woff2 */
+        @font-face {
+        font-family: 'GuanGeKai-C';
+        src: url('./GuanGeKai-B-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        }
 
      
         /* 基礎版面設定：黑底白字，支援手機滿版且可上下滾動 */
         body {
-
+            font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'Georgia', 'GuanGeKai-C', 'BiauKai', 'DFKai-SB', 'STKaiti', serif;
             font-size: x-large;
-            font-family: 
-                /* 1. 英文與數字優先使用襯線體 */
-                'EB Garamond', 'Georgia', 
-                /* 2. 雲端開源楷書（確保 Android / iOS 顯示一致且美觀） */
-                'LXGW WenKai TC', 
-                /* 3. 你原本指定的特殊行書/楷書（若有安裝則優先） */
-                /* 4. macOS / iOS 系統內建楷書 */
-                'BiauKaiTC', 'BiauKai', 'STKaiti', 'Kaiti TC', 
-                /* 5. Windows 系統內建標楷體 */
-                'DFKai-SB', 'KaiTi', 
-                /* 6. 最後保底 */
-                cursive, serif;
-                
-            /* 楷書筆畫較細，建議適度調整字級與行高提升閱讀體驗 */
-            font-size: x-large;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;            
         }
-      
     </style>
 </head>
 <body>
